@@ -1,0 +1,40 @@
+<% include header %>
+
+<div id="menu"
+        style = "background-color:#81B398; height: 470px; width: 200px; float:left;">
+        <p style="text-align:center"><b>Menu</b></p>
+            <ul>
+                <li><a href="/">Main Page</a></li>
+                <li><a href="/landmark/create">Add A Landmark</a></li>
+                <li><a href="/buddy/create">Add A Buddy</a></li>
+                <li><a href="/hotel/create">Add A Hotel</a></li>
+                <li><a href="/restaurant/create">Add A Restaurant</a></li>
+        	<li><a href="/buddy/all">Find a Buddy</a></li>
+		<li><a href="/landmark/about">About Page</a></li>
+	    </ul>
+</div>
+
+<div id="content"
+        style = "background-color:#88C0D1; height: 470px; width: 600px; float:left;">
+        <p style="text-align:center"><b>Landmarks</b></p>
+	<p style="text-align:center">Select a landmark to view a detailed information including
+		a list of nearby hotels.</p>
+   <% if(rs.length > 0) { %>
+   <form method="post" action="/landmark/view">
+	<label for ="Landmark_Name">Landmarks</label>
+	<select id="Landmark_Name" name = "Landmarks">
+	<% for (var i=0; rs.length > i; i++) { %>
+             <option value = "<%= rs[i].Landmark_Name %>">
+		<%=rs[i].Landmark_Name %> 
+             </option>
+        <% } %>
+	</select>
+	<br>
+	<input type="submit" value="Get Info">
+    </form>
+	<% } else { %>
+		No landmarks are entered into the database.
+	<% } %>
+
+</div>
+<% include footer %>

@@ -1,0 +1,34 @@
+<% include header %>
+
+<div id="menu"
+        style = "background-color:#81B398; height: 470px; width: 200px; float:left;">
+        <p style="text-align:center"><b>Menu</b></p>
+            <ul>
+                <li><a href="/">Main Page</a></li>
+                <li><a href="/landmark/create">Add A Landmark</a></li>
+                <li><a href="/buddy/create">Add A Buddy</a></li>
+                <li><a href="/hotel/create">Add A Hotel</a></li>
+                <li><a href="/restaurant/create">Add A Restaurant</a></li>
+                <li><a href="/landmark/dropdown">Find A Landmark</a></li>
+        	<li><a href="/buddy/all">Find a Buddy</a></li>
+		<li><a href="/landmark/about">About Page</a></li>    
+	</ul>
+</div>
+
+<div id="content"
+        style = "background-color:#88C0D1; height: 470px; width: 600px; float:left;">
+    <p style="color:black"><i>Restaurant</i></p>
+   <% if(rs.length > 0) { %>
+    <table>
+        <tr><th>Restaurant</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+            <tr>
+             <td><a href="/restaurant/?Restaurant_ID=<%= rs[i].Restaurant_ID %>"> <%= rs[i].Restaurant_Name %></a></td>
+            </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+         No restaurants are entered into the database.
+    <% } %>
+</div>
+<% include footer %>

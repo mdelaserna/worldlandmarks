@@ -1,0 +1,43 @@
+<% include header %>
+
+<div id="menu"
+        style = "background-color:#81B398; height: 470px; width: 200px; float:left;">
+        <p style="text-align:center"><b>Menu</b></p>
+            <ul>
+                <li><a href="/">Main Page</a></li>
+                <li><a href="/hotel/create">Add A Hotel</a></li>
+                <li><a href="/buddy/create">Add A Buddy</a></li>
+		<li><a href="/restaurant/create">Add A Restaurant</a></li>
+                <li><a href="/landmark/dropdown">Find A Landmark</a></li>
+		<li><a href="/buddy/all">Find a Buddy</a></li>
+        	<li><a href="/landmark/about">About Page</a></li>
+	    </ul>
+</div>
+
+<div id="content"
+        style = "background-color:#88C0D1; height: 470px; width: 600px; float:left;">
+    <p style="color:blue"><i>Enter a landmark's information:</i></p>
+
+<form method="POST" action="<%= action %>">
+    <table id="login">
+    	<tr><td>Landmark_Name:</td>
+	    <td><input type ="text" id="landmark_name" name="landmark_name" /></td>
+	</tr>
+        <tr><td>City:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="city" name="city" /></td>
+        </tr>
+        <tr><td>Country:</td>
+            <td><input type="text" id="country" name="country" /></td>
+        </tr>
+
+        </tr>
+        <tr><td>Type_Name:</td>
+            <td><input type="text" id="type_name" name="type_name" /></td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
+
+</div>
+<% include footer %>
