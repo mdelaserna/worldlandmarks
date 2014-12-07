@@ -20,7 +20,7 @@
 
 <form method="POST" action="<%= action %>">
     <table id="login">
-    	<tr><td>Landmark_Name:</td>
+    	<tr><td>Landmark Name:</td>
 	    <td><input type ="text" id="landmark_name" name="landmark_name" /></td>
 	</tr>
         <tr><td>City:</td>
@@ -30,13 +30,28 @@
         <tr><td>Country:</td>
             <td><input type="text" id="country" name="country" /></td>
         </tr>
-
-        </tr>
-        <tr><td>Type_Name:</td>
-            <td><input type="text" id="type_name" name="type_name" /></td>
-        </tr>
-    </table>
-    <input type="submit">
+   </table>
+        <tr><td>Landmark Type:</td>
+	<select><td>
+   		<option value ="Cave">Cave</option>
+   		<option value ="Spring">Spring</option>
+   		<option value ="Waterfall">Waterfall</option>
+   		<option value ="Park">Park</option>
+   		<option value ="Garden">Garden</option>
+   		<option value ="Architectural">Architectural</option>
+   		<option value ="Historical">Historical</option>
+   		<option value ="Castle">Castle</option>
+   		<option value ="Church">Church</option>
+   		<option value ="Monument">Monument</option>
+   		<option value ="Bridges">Bridges</option>
+   		<option value ="Industrial">Industrial</option>
+   		<option value ="Railway">Railway</option>
+   		<option value ="Museum">Museum</option>
+   		<option value ="Beach">Beach</option>
+   		<option value ="Other">Other</option>
+	</td></select>
+	<br>
+   <input type="submit">
 </form>
 
 </div>
